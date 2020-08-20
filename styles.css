@@ -163,6 +163,32 @@ i.icon-form {
 	color: #fff;
 }
 
+/* Menu */
+
+#customNav {
+    text-align: right;
+		display: none;
+}
+#customNav a{
+	color: #313131;
+}
+#customNav a:hover, #customNav a:active, #customNav a:focus {
+	color: #f66135;
+}
+@media only screen and (min-width: 876px) {
+   #customNav {
+		 display: inline-block;
+     margin-top: 50px;
+     background: white;
+     padding: 1rem 0;
+     position: absolute;
+     right: 250px;
+     top: -47px;
+     width: auto;
+     font-size: 14px!important;
+     line-height: 1rem;
+   }
+}
 
 /* Zurb Foundation Overrides */
 

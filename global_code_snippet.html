@@ -9,6 +9,9 @@
 
 <script>
 
+  var skilljarDomain = 'https://university.getduda.com';
+  var idpLogoutEndpoint = 'https://university.getduda.com';
+
   //Hubspot customization
   if (typeof skilljarUser !=='undefined') {
     	var _hsq=_hsq || [];
@@ -45,8 +48,24 @@
 
 		$(document).ready(function() {
 
-      //Homepage Hero effect
+      // Logout Redirection
+      $('a.signout-link.sj-text-sign-out').attr('href','#');
+      $('a.signout-link.sj-text-sign-out').click(function() {
+          var sjLogOutRequest = new XMLHttpRequest();
+          var logOutUrl ='https://' + skilljarDomain + '/auth/logout?next=%2F';
+          sjLogOutRequest.open('GET', logOutUrl);
+          sjLogOutRequest.onreadystatechange = function () {
+              window.location = idpLogoutEndpoint;
+          };
+          sjLogOutRequest.send();
+      });
 
+      // Menu
+
+      var links = '<a href="https://duda.co" target="_blank">Duda.co</a><a href="https://support.duda.co/hc/" target="_blank">Support Portal</a><a href="https://resources.duda.co/webinars" target="_blank">Webinars</a>';
+      $('#header-left').append('<div id="customNav">'+links+'</div>');
+
+      //Homepage Hero effect
 			if (window.location.href.split('/').pop() === "") {
 				$("#catalog-content").append("<p class='footer-message'>Any problems or questions? <a href='javascript:void($zopim.livechat.window.toggle())'>We’re here to help you!</a></b>");
 			}
