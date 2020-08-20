@@ -1,0 +1,111 @@
+<!-- Start of d1support Zendesk Widget script -->
+<script id = "ze-snippet" src = "https://static.zdassets.com/ekr/snippet.js?key=1184958f-5e87-48c1-87a7-fb32f3e81747" ></script>
+
+<!-- Crazy Egg -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0013/5752.js" async="async"></script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4790854.js"></script>
+
+<script>
+
+  //Hubspot customization
+  if (typeof skilljarUser !=='undefined') {
+    	var _hsq=_hsq || [];
+    	_hsq.push(['identify', {
+    		email: skilljarUser.email, firstname: skilljarUser.firstName, lastname: skilljarUser.lastName
+    	}
+    	]);
+    	_hsq.push(['trackPageView']);
+    }
+
+  // Zendesk widget customization
+  window.zESettings = {
+    webWidget: {
+      chat: {
+        suppress: true
+      },
+      contactForm: {
+        suppress: false
+      },
+      helpCenter: {
+        suppress: false
+      },
+      talk: {
+        suppress: true
+      },
+      answerBot: {
+        suppress: false
+      }
+    }
+  };
+
+
+	$(function() {
+
+		$(document).ready(function() {
+
+      //Homepage Hero effect
+
+			if (window.location.href.split('/').pop() === "") {
+				$("#catalog-content").append("<p class='footer-message'>Any problems or questions? <a href='javascript:void($zopim.livechat.window.toggle())'>We’re here to help you!</a></b>");
+			}
+
+			$('.certificate-wording').html(function(i, text) {
+				return text.replace(/\s+with a score of \d+%/, '');
+			});
+			$('.certificate-wording .org-name').text(function(i, text) {
+				return text.trim();
+			});
+
+			$(".courses").click(function() {
+				$([document.documentElement, document.body]).animate({
+					scrollTop: $("#catalog-content").offset().top
+				}, 1000);
+			});
+
+			const words = ["Grow Your Business", "Advance Your Career", "Earn Certifications"];
+			let i = 0;
+			let timer;
+
+			function typingEffect() {
+				let word = words[i].split("");
+				var loopTyping = function() {
+					if (word.length > 0) {
+						document.getElementById('word').innerHTML += word.shift();
+					} else {
+						setTimeout(deletingEffect, 3000);
+						return false;
+					};
+					timer = setTimeout(loopTyping, 100);
+				};
+				loopTyping();
+			};
+
+			function deletingEffect() {
+				let word = words[i].split("");
+				var loopDeleting = function() {
+					if (word.length > 0) {
+						word.pop();
+						document.getElementById('word').innerHTML = word.join("");
+					} else {
+						if (words.length > (i + 1)) {
+							i++;
+						} else {
+							i = 0;
+						};
+						typingEffect();
+						return false;
+					};
+					timer = setTimeout(loopDeleting, 100);
+				};
+				loopDeleting();
+			};
+
+			typingEffect();
+
+		});
+
+	});
+
+</script>
