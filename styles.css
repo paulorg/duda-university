@@ -76,6 +76,7 @@ body.blocked{
 	    padding: 10px 0;
 			position: relative;
 			height: auto;
+min-width: 370px;
 	}
 	#customNav.hidden{
 		display: block;
@@ -714,6 +715,10 @@ p.purchase-button-subtext.sj-text-registration-closed-start-date-future {
 	margin: -24px 0 0 !important;
 	width: 100%;
 }
+#main-container[data-catalog-page="learn-from-the-experts"] .one-col-full {
+   background: linear-gradient(105deg, #21b3d1 0%, #b9e9b2 100%);
+}
+
 
 .sj-page-catalog:not(.sj-page-catalog-root) .catalog-header {
 	color: #fff;
@@ -2234,6 +2239,12 @@ a.header-link.login-link.sj-text-sign-in {
 .footer-message a {
     display: block;
     font-weight: 600;
+}
+.certificate-wording .button {margin-bottom: 30px!important;padding: .5rem 30px;}
+
+.certificate-wording .button i {
+    margin-right: 5px;
+    color: #fff;
 }
 
 </style>

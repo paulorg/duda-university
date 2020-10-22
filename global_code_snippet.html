@@ -1,3 +1,11 @@
+<!-- Start Certificate badge analytics  -->
+<script>
+  $('img[alt="Add to LinkedIn Profile"]').on('click', function(){
+    ga('send','event','LinkedIn Badge','Click','Profile Page');
+  });
+</script>
+<!-- End Certificate badge analytics  -->
+
 <!-- Start of d1support Zendesk Widget script -->
 <script id = "ze-snippet" src = "https://static.zdassets.com/ekr/snippet.js?key=1184958f-5e87-48c1-87a7-fb32f3e81747" ></script>
 
@@ -49,16 +57,16 @@
 		$(document).ready(function() {
 
       // Logout Redirection
-      // $('a.signout-link.sj-text-sign-out').attr('href','#');
-      // $('a.signout-link.sj-text-sign-out').click(function() {
-      //     var sjLogOutRequest = new XMLHttpRequest();
-      //     var logOutUrl ='https://' + skilljarDomain + '/auth/logout?next=%2F';
-      //     sjLogOutRequest.open('GET', logOutUrl);
-      //     sjLogOutRequest.onreadystatechange = function () {
-      //         window.location = idpLogoutEndpoint;
-      //     };
-      //     sjLogOutRequest.send();
-      // });
+      $('a.signout-link.sj-text-sign-out').attr('href','#');
+      $('a.signout-link.sj-text-sign-out').click(function() {
+          var sjLogOutRequest = new XMLHttpRequest();
+          var logOutUrl ='https://' + skilljarDomain + '/auth/logout?next=%2F';
+          sjLogOutRequest.open('GET', logOutUrl);
+          sjLogOutRequest.onreadystatechange = function () {
+              window.location = idpLogoutEndpoint;
+          };
+          sjLogOutRequest.send();
+      });
 
 
 
