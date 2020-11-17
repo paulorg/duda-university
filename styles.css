@@ -2251,7 +2251,7 @@ a.header-link.login-link.sj-text-sign-in {
 /* 404 Error page */
 
 .sj-page-error-404 #skilljar-content{
-    background: #fff;
+    background: linear-gradient(180deg, #DCE9F4 0%, #FFFFFF 100%) no-repeat;
 }
 
 .sj-page-error-404 .message{
