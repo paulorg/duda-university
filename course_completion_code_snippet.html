@@ -1,9 +1,28 @@
 <script>
 var _hsq = window._hsq = window._hsq || [];
-if (typeof(skilljarCourse) !== 'undefined') {
- _hsq.push(['trackEvent', {
- id: '000009227126',
- value: null
- }]);
+courseIds = {
+ '3hx5mtmxdu9a5': '000009660766',
+ '3uoltg6ue982f': '000009660767',
+ '2ethzrqoaz2ky': '000009661930',
+ '20rse69hi3v17': '000009661393',
+ 's1v2g1omkf31': '000009661394',
+ '219qqi2ii5kft': '000009661399',
+ '3ohknqin6yzn3': '000009660771',
+ '39bktf0djl746': '000009661409',
+ '3blry9mci71ln': '000009661410',
+ '3jugbc70rsn8p': '000009661421',
+ '39lqcx9820xc3': '000009661422',
+ '3t4ggrttn3o54': '000009660772',
+ '2o1l0dl9mgcta': '000009660774',
+ '2l1fxbkducry0': '000009661985',
 }
+if (typeof(skilljarCourse) !== 'undefined') {
+ id = skilljarCourse.publishedCourseId;
+ if (courseIds.hasOwnProperty(id)) {
+ _hsq.push(['trackEvent', {
+ id: CourseIds[id],
+ value: null
+ }]);
+ };
+};
 </script>
