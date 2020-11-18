@@ -617,11 +617,11 @@ p.purchase-button-subtext.sj-text-registration-closed-start-date-future {
     margin-top: -5rem!important;
 }
 
-.sj-page-catalog-root .search #catalog-content:before {
+.search #catalog-content:before {
     content: none !important;
 }
 
-.sj-page-catalog-root .search .coursebox-container.lesson i.icon-text {
+.search .coursebox-container.lesson i.icon-text {
     display: block!important;
     position: relative!important;
     width: 340px!important;
@@ -633,7 +633,7 @@ p.purchase-button-subtext.sj-text-registration-closed-start-date-future {
     margin: -12px 0;
     background-position: center center!important;
 }
-.sj-page-catalog-root .search .coursebox-container.lesson .fa-check-square-o{
+.search .coursebox-container.lesson .fa-check-square-o{
     display: block!important;
     position: relative!important;
     width: 340px!important;
@@ -647,30 +647,30 @@ p.purchase-button-subtext.sj-text-registration-closed-start-date-future {
 }
 
 @media only screen and (min-width: 512px) {
-    .sj-page-catalog-root .search .coursebox-container {
+    .search .coursebox-container {
         width: 335px !important;
     }
-    .sj-page-catalog-root .search .coursebox-container .coursebox-image{
+    .search .coursebox-container .coursebox-image{
         display: block !important;
         width: inherit !important;
         max-height: 12rem !important;
         height: 12rem !important;
         float: none !important;
     }
-    .sj-page-catalog-root .search .coursebox-container .coursebox-image img{
+    .search .coursebox-container .coursebox-image img{
         max-height: 12rem !important;
         height: 12rem !important;
     }
-    .sj-page-catalog-root .search .coursebox-container .coursebox-text{
+    .search .coursebox-container .coursebox-text{
         margin: 0!important;
     }
-    .sj-page-catalog-root .search .coursebox-container .coursebox-text-description{
+    .search .coursebox-container .coursebox-text-description{
         margin: 0!important;
     }
-    .sj-page-catalog-root .search .coursebox-container .storefront-price{
+    .search .coursebox-container .storefront-price{
         display: none;
     }
-    .sj-page-catalog-root .search .coursebox-container .coursebox-callout{
+    .search .coursebox-container .coursebox-callout{
         display: none;
     }
 }
@@ -2301,4 +2301,16 @@ a.header-link.login-link.sj-text-sign-in {
     transform: translate(5px, 0);
   }
 }
+
+@media only screen and (min-width: 875px) {
+	.lfte-link{
+		display: none !important;
+	}
+}
+@media only screen and (min-width: 1140px) {
+	.lfte-link{
+		display: inline-block !important;
+	}
+}
+
 </style>
