@@ -242,6 +242,7 @@ i.icon-form {
 }
 
 .video-max {
+	box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
 	max-width: 465px !important;
 }
 
