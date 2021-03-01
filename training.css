@@ -1917,7 +1917,7 @@ body.sj-page-catalog-root #header .header-left {
 .sj-page-catalog-root .coursebox-container.sj-registration-closed,
 .sj-page-catalog .coursebox-container.sj-registration-closed {
 	pointer-events: none;
-	opacity: .65;
+	/*opacity: .65;*/
 }
 
 .sj-page-catalog-root .coursebox-container:hover {
@@ -1988,13 +1988,13 @@ body.sj-page-catalog-root #header .header-left {
 	/*opacity: .65;*/
 }
 
-.sj-page-catalog-root [data-tags="coming-soon"] .catalog-page-callout.coursebox-callout,
-.sj-page-catalog [data-tags="coming-soon"] .catalog-page-callout.coursebox-callout {
+.sj-page-catalog-root [data-tags^="coming-soon"] .coursebox-callout,
+.sj-page-catalog [data-tags^="coming-soon"] .coursebox-callout {
   color: #fff!important;
   pointer-events: none;
   position: absolute;
-  top: 10rem;
-  bottom: initial;
+  top: calc(10rem + 4px);
+  bottom: initial !important;
   left: 0 !important;
   right: 0!Important;
   text-align: center;
@@ -2005,6 +2005,21 @@ body.sj-page-catalog-root #header .header-left {
 .sj-page-catalog-root [data-tags="coming-soon"] img, .sj-page-catalog-root [data-tags="coming-soon"] .coursebox-text, .sj-page-catalog-root [data-tags="coming-soon"] .coursebox-text-description {
     opacity: .75;
     filter: grayscale(60%);
+}
+.search [data-tags^="coming-soon"]:after {
+  content: 'Coming Soon';
+  color: #fff!important;
+  pointer-events: none;
+  position: absolute;
+	top: calc(10rem + 4px);
+  bottom: initial !important;
+  left: 0 !important;
+  right: 0!Important;
+  text-align: center;
+  background: rgba(246, 96, 53, .8);
+  padding: .5rem 0;
+  letter-spacing: .25px;
+  font-size: 12px;
 }
 
 .sj-page-catalog-root [data-tags="coming-soon"] .catalog-page-callout.coursebox-callout span:after {
